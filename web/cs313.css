@@ -1,0 +1,55 @@
+body.assignmentList {
+  background-color: lightgray;
+  font-family: comic sans ms;
+}
+
+img.navy {
+  padding: 15px;
+  width: 700px;
+  height: 375px;
+}
+img.tkd {
+  padding: 15px;
+  width: 400px;
+  height: 440px;
+}
+
+h1.assignmentList {
+  color: indigo;
+  font-size: 400%;
+  text-align: center;
+}
+
+ul.assignmentList {
+  font-size: 150%;
+  list-style-type: none;
+  margin-bottom: 10 px;
+  text-align: center;
+}
+
+.body {
+   grid-column: 2;
+   grid-row: 2;
+}
+
+.heading {
+   grid-column: 1 / 4;
+   text-align: center;
+   padding-top: 2%;
+   padding-bottom: 2%;
+}
+
+.page {
+  background-color: lightgray;
+   display: grid;
+   grid-template-columns: 20% 60% 20%;
+   grid-template-rows: 10% 80% 10%;
+}
+
+.selections {
+  grid-column: 1;
+  grid-row: 2;
+  text-align: left;
+  padding-left: 20%;
+  padding-top: 5%;
+}
