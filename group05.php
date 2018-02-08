@@ -1,10 +1,17 @@
 <?php
+$dbUrl = getenv('DATABASE_URL');
 
-$dbUser = 'temp';
-$dbPassword = 'temp_pass';
-$dbName = 'test';
-$dbHost = '127.0.0.1';
-$dbPort = '5432';
+if (empty($dbUrl)) {
+	$dbURL = "postgres://temp:temp_pass@localhost:5432/test";
+}
+
+$dbopts = parse_url($dbUrl);
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
 
 try
 {
