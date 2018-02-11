@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(235, 235, 235);
+  color: rgb(91, 52, 30);
+}
+
+.heading {
+  font-size: 200%;
+  text-align: center;
+}
+
+.candy_select {
+  padding: 50px;
+}
