@@ -57,7 +57,6 @@ while($row =  $statement->fetch(PDO::FETCH_ASSOC)) {
 echo "<br/>";
 $totalCost = number_format($totalCost, 2, ".", ",");
 echo "Total Cost = $$totalCost";
-var_dump($_SESSION['orderItem']);
 ?>
 <form action="submitOrder.php" method="POST">
   <input type="submit" value="Submit Order">
