@@ -3,7 +3,8 @@
 
 <?php
 session_start();
-require "candyConnect.php";
+
+require_once "candyConnect.php";
 
 if($_SESSION["loginFail"] != true){
   $_SESSION["loginFail"] = false;

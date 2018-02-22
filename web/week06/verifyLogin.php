@@ -3,13 +3,15 @@
 
 <?php
 session_start();
-require "candyConnect.php";
+require_once "candyConnect.php";
+//require "verifyData.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
   $_SESSION["usrNm"] = test_input($_POST["userName"]);
   $_SESSION["usrPss"] = test_input($_POST["userPassword"]);
   verifyLogin();
 }
+
 
 function test_input($data) {
   $data = trim($data);
