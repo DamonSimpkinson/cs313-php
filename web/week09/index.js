@@ -6,14 +6,14 @@ var url = require('url');
 
 var app = express();
 
+var port = (process.env.PORT || 5000);
+
 // set view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // set static path
 app.use(express.static(path.join(__dirname, 'public')));
-
-//app.use(bodyParser.urlencoded({ extended: true}));
 
 var postageContents = fs.readFileSync('./public/firstClassMail.json');
 var postage = JSON.parse(postageContents);
@@ -47,6 +47,6 @@ function displayPostage(res, mailType, mailWeight) {
   res.render('result', params);
 };
 
-app.listen(3000, function(){
-  console.log('Server started on Port 3000');
-})
+app.listen(port, function(){
+  console.log('Running on port', port);
+});

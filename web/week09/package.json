@@ -4,7 +4,7 @@
   "description": "Postal Rate Calculator",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node .cs313-php/web/week09/index.js"
   },
   "dependencies": {
     "body-parser": "*",
