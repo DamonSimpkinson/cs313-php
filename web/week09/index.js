@@ -18,11 +18,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 var postageContents = fs.readFileSync('./public/firstClassMail.json');
 var postage = JSON.parse(postageContents);
 
+/*
 app.get('/', function(req, res){
   res.render('index', {
     postage: postage
   });
-});
+});*/
 
 app.get('/mail', function(req, res){
   handlePostage(req, res);
